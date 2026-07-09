@@ -1,7 +1,6 @@
 /.phpunit.cache
 /bootstrap/ssr
 /node_modules
-/public/build
 /public/fonts-manifest.dev.json
 /public/hot
 /public/storage
@@ -12,6 +11,8 @@
 /resources/js/wayfinder
 /vendor
 .DS_Store
+.claude
+.cursor
 .env
 .env.backup
 .env.production

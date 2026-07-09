@@ -35,4 +35,19 @@ return [
         ],
     ],
 
+    'whatsapp' => [
+        'number' => env('WHATSAPP_NUMBER', '6285923272645'),
+        'default_message' => 'Halo Gerai Dempo, saya ingin bertanya tentang menu catering.',
+
+        'app_id' => env('WHATSAPP_APP_ID'),
+        'app_secret' => env('WHATSAPP_APP_SECRET'),
+        'access_token' => env('WHATSAPP_ACCESS_TOKEN'),
+        'phone_number_id' => env('WHATSAPP_PHONE_NUMBER_ID'),
+        'business_account_id' => env('WHATSAPP_BUSINESS_ACCOUNT_ID'),
+        'webhook_verify_token' => env('WHATSAPP_WEBHOOK_VERIFY_TOKEN'),
+        'template_name' => env('WHATSAPP_TEMPLATE_NAME', 'website_inquiry'),
+        'order_template_name' => env('WHATSAPP_ORDER_TEMPLATE_NAME', 'order_confirmation'),
+        'template_language' => env('WHATSAPP_TEMPLATE_LANGUAGE', 'id'),
+    ],
+
 ];

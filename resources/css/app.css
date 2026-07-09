@@ -59,6 +59,14 @@
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-ring: var(--sidebar-ring);
+
+    /* Gerai Dempo brand palette — sampled from public/assets/images/logo.png */
+    --color-brand-cream: oklch(97% 0.035 95);
+    --color-brand-green: oklch(64% 0.16 137);
+    --color-brand-green-dark: oklch(48% 0.13 140);
+    --color-brand-brown: oklch(33% 0.06 45);
+    --color-brand-pink: oklch(85% 0.06 20);
+    --color-brand-pink-dark: oklch(72% 0.11 20);
 }
 
 /*

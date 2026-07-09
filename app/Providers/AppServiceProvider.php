@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\WebsiteText;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
 
@@ -24,6 +26,14 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->configureDefaults();
+
+        View::composer('layouts.partials.public-footer', function ($view) {
+            $view->with('texts', WebsiteText::whereIn('group', ['footer', 'contact'])->pluck('value', 'key'));
+        });
+
+        View::composer('layouts.partials.whatsapp-button', function ($view) {
+            $view->with('texts', WebsiteText::where('group', 'whatsapp')->pluck('value', 'key'));
+        });
     }
 
     /**
